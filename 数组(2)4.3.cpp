@@ -27,8 +27,12 @@ int main() {
 		cin >> a[i];
 	}
 	sort(a,n);
+	int* m = a;
 	cout << "这串数字由小到大依次为";
 	for (int u = 0; u < n; u++)
-		cout << a[u] << " ";
+	{
+		cout << *m << " ";
+		m = m + 1;
+	}
 	delete[] a;
 }
